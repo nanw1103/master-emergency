@@ -1,0 +1,29 @@
+.page-content {
+    padding-bottom: 60px;
+}
+.toolbar.toolbar-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 -1px 10px rgba(0,0,0,0.1);
+}
+.toolbar-inner {
+    justify-content: space-around;
+    padding: 0;
+}
+.tab-link {
+    padding: 8px 0;
+    width: 25%;
+    text-align: center;
+}
+.tab-link i {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+.tabbar-label {
+    font-size: 12px;
+    display: block;
+} 

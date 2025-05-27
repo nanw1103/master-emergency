@@ -1,7 +1,76 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>师父大事不好了！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@latest/css/framework7.bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@latest/css/framework7-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>师父大事不好了！</h1>
+    <div id="app">
+        <div class="view view-main">
+            <div class="page" data-name="home">
+                <!-- Home page content will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Tabbar -->
+        <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner">
+                <a href="#/" class="link tab-link tab-link-active" data-view=".view-main">
+                    <i class="icon f7-icons">house_fill</i>
+                    <span class="tabbar-label">首页</span>
+                </a>
+                <a href="#/search/" class="link tab-link" data-view=".view-main">
+                    <i class="icon f7-icons">search</i>
+                    <span class="tabbar-label">搜索</span>
+                </a>
+                <a href="#/notifications/" class="link tab-link" data-view=".view-main">
+                    <i class="icon f7-icons">bell_fill</i>
+                    <span class="tabbar-label">通知</span>
+                </a>
+                <a href="#/profile/" class="link tab-link" data-view=".view-main">
+                    <i class="icon f7-icons">person_fill</i>
+                    <span class="tabbar-label">我的</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/framework7@latest/js/framework7.bundle.min.js"></script>
+    <script>
+        var app = new Framework7({
+            el: '#app',
+            routes: [
+                {
+                    path: '/',
+                    url: './pages/home.html',
+                },
+                {
+                    path: '/search/',
+                    url: './pages/search.html',
+                },
+                {
+                    path: '/notifications/',
+                    url: './pages/notifications.html',
+                },
+                {
+                    path: '/profile/',
+                    url: './pages/profile.html',
+                }
+            ],
+            view: {
+                stackPages: true,
+                animate: true,
+                pushState: false
+            }
+        });
+
+        // Initialize tabs
+        var mainView = app.views.create('.view-main', {
+            url: '#/'
+        });
+    </script>
 </body>
+</html>
